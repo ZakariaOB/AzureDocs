@@ -1,0 +1,295 @@
+- Cost management
+    Azure doesn't directly bill based on the resource cost. Charges for a resource are calculated by using one or more meters. 
+    Meters are used to track a resource's usage throughout its lifetime. These meters are then used to calculate the bill.
+    For example, when you create a single Azure resource, like a virtual machine, it has one or more meter instances created. 
+    Meters are used to track the usage of the resource over time. Each meter emits usage records that are used by Azure 
+    to calculate the bill.
+    For example, a single virtual machine (VM) created in Azure may have the following meters created to track its usage:
+    Compute Hours, IP Address Hours, Data Transfer In, Data Transfer Out, Standard Managed Disk, Standard Managed Disk Operations, 
+    Standard IO-Disk, Standard IO-Block Blob Read, Standard IO-Block Blob Write, Standard IO-Block Blob Delete
+
+- Paas
+    Platform as a service (PaaS) is a complete development and deployment environment in the cloud, 
+    with resources that enable you to deliver everything from simple cloud-based apps to sophisticated, 
+    cloud-enabled enterprise applications. You purchase the resources you need from a cloud service 
+    provider on a pay-as-you-go basis and access them over a secure Internet connection.
+    Like IaaS, PaaS includes infrastructure-servers, storage and networking-but also middleware, development tools, 
+    business intelligence (BI) services, database management systems and more. PaaS is designed to support 
+    the complete web application lifecycle: building, testing, deploying, managing and updating.
+    PaaS allows you to avoid the expense and complexity of buying and managing software licenses, 
+    the underlying application infrastructure and middleware, container orchestrators such 
+    as Kubernetes or the development tools and other resources. You manage the applications 
+    and services you develop and the cloud service provider typically manages everything else.
+
+- High Elasticity 
+    You can increase or decrease your capacity based on the current demand . It's like scalability but with being able to 
+    decrease your capacity .
+    Horizontal scaling : Scaling out / Scaling in => Add or remove servers of the same size
+    Vertical scaling is generally hard for traditionnal architecture so you'll usually only see horizontal scaling described 
+    with Elasticity .
+    > Elastic computing is the ability to quickly expand or decrease computer processing, memory, and storage 
+    resources to meet changing demands without worrying about capacity planning and engineering for peak usage. 
+    Typically controlled by system monitoring tools, elastic computing matches the amount  of resources allocated 
+    to the amount of resources actually needed without disrupting operations. With cloud elasticity, a company avoids 
+    paying for unused capacity or idle resources and doesn't have to worry about investing in the purchase or maintenance 
+    of additional resources and equipment.
+    While security and limited control are concerns to take into account when considering elastic 
+    cloud computing, it has many benefits. Elastic computing is more efficient than your typical 
+    IT infrastructure, is typically automated so it doesn't have to rely on human administrators 
+    around the clock, and offers continuous availability of services by avoiding unnecessary 
+    slowdowns or service interruptions.
+
+- Public, Hybrid and private clouds
+    Private cloud is a type of cloud computing that delivers similar advantages to public cloud, 
+    including scalability and self-service, but through a proprietary architecture. Unlike public clouds, 
+    which deliver services to multiple organizations, 
+    a private cloud is dedicated to the needs and goals of a single organization.
+
+    As a result, private cloud is best for businesses with dynamic or unpredictable 
+    computing needs that require direct control over their environments, typically to meet security, 
+    business governance or regulatory compliance requirements.
+    There are three general cloud deployment models: public, private and hybrid.
+
+    A public cloud is where an independent, third-party provider, such as Amazon Web Services (AWS) or Microsoft Azure, 
+    owns and maintains compute resources that customers can access over the internet. Public cloud users share these resources, 
+    a model known as a multi-tenant environment.
+    By comparison, a private cloud is created and maintained by an individual enterprise. The private cloud might be based 
+    on resources and infrastructure already present in an organization's on-premises data center or on new, separate infrastructure. 
+    In both cases, the enterprise itself owns and operates the private cloud.
+    A hybrid cloud is a model in which a private cloud connects with public cloud infrastructure, allowing an organization 
+    to orchestrate workloads across the two environments. In this model, the public cloud effectively becomes an extension 
+    of the private cloud to form a single, uniform cloud. A hybrid cloud deployment requires a high level of compatibility 
+    between the underlying software and services used by both the public and private clouds.
+    When an organization properly architects and implements a private cloud, it can provide most of the same benefits 
+    found in public clouds, such as user self-service and scalability, as well as the ability to provision 
+    and configure virtual machines (VMs) and change or optimize computing resources on demand. 
+    An organization can also implement chargeback tools to track computing usage and ensure business units pay only 
+    for the resources or services they use.
+    Private clouds are often deployed when public clouds are deemed inappropriate or inadequate for the needs 
+    of a business. For example, a public cloud might not provide the level of service availability or uptime that 
+    an organization needs. In other cases, the risk of hosting a mission-critical workload in the public cloud 
+    might exceed an organization's risk tolerance, or there might be security or regulatory concerns related 
+    to the use of a multi-tenant environment. In these cases, an enterprise might opt to invest in a 
+    private cloud to realize the benefits of cloud computing, while maintaining total control and ownership of its environment.
+    However, private clouds also have some disadvantages. First, private cloud technologies, such as increased automation 
+    and user self-service, can bring some complexity into an enterprise. These technologies typically require 
+    an IT team to rearchitect some of its data center infrastructure, as well as adopt additional management tools. 
+    As a result, an organization might have to adjust or even increase its IT staff to successfully implement 
+    a private cloud. This is different than public cloud, where most of the underlying complexity is handled by the cloud provider.
+    Another potential disadvantage of private clouds is cost. A benefit of public cloud is cost mitigation through 
+    the use of computing as a "utility" -- customers only pay for the resources they use. When a business owns 
+    its private cloud, however, it bears all of the acquisition, deployment, support and maintenance costs involved.
+
+-Scale Sets
+    Allows you group together identical VMs and automatically increase or decrease the amount of servers based on :
+       - Change in CPU , memory disk and network performance
+       - On a predefined schedule
+    Azure virtual machine scale sets let you create and manage a group of identical, load balanced VMs. 
+    The number of VM instances can automatically increase or decrease in response to demand or a defined schedule. 
+    Scale sets provide high availability to your applications, and allow you to centrally manage, configure, 
+    and update a large number of VMs. With virtual machine scale sets, you can build large-scale services for 
+    areas such as compute, big data, and container workloads.
+    To provide redundancy and improved performance, applications are typically distributed across multiple instances. 
+    Customers may access your application through a load balancer that distributes requests to one of the application instances. 
+    If you need to perform maintenance or update an application instance, your customers must be distributed to another 
+    available application instance. To keep up with additional customer demand, you may need to increase the number 
+    of application instances that run your application.
+    A region is a set of datacenters deployed within a latency-defined perimeter and connected through 
+    a dedicated regional low-latency network. With more global regions than any other cloud provider, 
+    Azure gives customers the flexibility to deploy applications where they need to. Azure is generally 
+    available in 46 regions around the world, with plans announced for 8 additional regions.
+
+-Azure files
+    Azure Files offers fully managed file shares in the cloud that are accessible via the industry 
+    standard Server Message Block (SMB) protocol. Azure file shares can be mounted concurrently by 
+    cloud or on-premises deployments of Windows, Linux, and macOS. Additionally, Azure file shares 
+    can be cached on Windows Servers with Azure File Sync for fast access near where the data is being used.
+        Azure Files:
+        Extend your servers to Azure with Sync for on-premises performance and capability.
+        Secure data at rest and in-transit using SMB 3.0 and HTTPS.
+        Simplify cloud file share management using familiar tools.
+        Create high-performance file shares using the Premium Files storage tier.
+
+- Azure ML
+    Machine Learning Studio is a powerfully simple browser-based, visual drag-and-drop authoring 
+    environment where no coding is necessary. Go from idea to deployment in a matter of clicks.
+    Azure Machine Learning is designed for applied machine learning. Use best-in-class algorithms 
+    and a simple drag-and-drop interface-and go from idea to deployment in a matter of clicks.
+
+- Azure resource manager
+    Azure Resource Manager is the deployment and management service for Azure. It provides a consistent 
+    management layer that enables you to create, update, and delete resources in your Azure subscription. 
+    You can use its access control, auditing, and tagging features to secure and organize your resources after deployment.
+    When you take actions through the portal, PowerShell, Azure CLI, REST APIs, or client SDKs, the Azure 
+    Resource Manager API handles your request. Because all requests are handled through the same API, 
+    you see consistent results and capabilities in all the different tools. All capabilities that are available 
+    in the portal are also available through PowerShell, Azure CLI, REST APIs, and client SDKs.  
+
+- Azure Log analytics
+   Log Analytics is a web tool used to write and execute Azure Monitor log queries. 
+   Open it by selecting Logs in the Azure Monitor menu. It starts with a new blank query.
+
+- PowerShell
+   PowerShell is a task-based command-line shell and scripting language built on .NET. PowerShell 
+   helps system administrators and power-users rapidly automate tasks that manage operating systems (Linux, macOS, and Windows) 
+   and processes. PowerShell commands let you manage computers from the command line. PowerShell 
+   providers let you access data stores, such as the registry and certificate store, as easily 
+   as you access the file system. PowerShell includes a rich expression parser and a fully developed scripting language.
+
+- Azure global infrastructure:
+    A region is a set of datacenters deployed within a latency-defined perimeter and connected through a dedicated regional 
+    low-latency network. With more global regions than any other cloud provider, Azure gives customers 
+    the flexibility to deploy applications where they need to. Azure is generally available in 46 regions around the world, 
+    with plans announced for 8 additional regions.A geography is a discrete market, typically containing two or more regions, 
+    that preserves data residency and compliance boundaries. Geographies allow customers with specific data-residency 
+    and compliance needs to keep their data and applications close. Geographies are fault-tolerant to withstand 
+    complete region failure through their connection to our dedicated high-capacity networking infrastructure.
+    Availability Zones are physically separate locations within an Azure region. Each Availability Zone 
+    is made up of one or more datacenters equipped with independent power, cooling, and networking. Availability 
+    Zones allow customers to run mission-critical applications with high availability and low-latency replication.
+    
+- Azure VNets
+    Azure Virtual Network (VNet) is the fundamental building block for your private network in Azure. 
+    VNet enables many types of Azure resources, such as Azure Virtual Machines (VM), to securely communicate 
+    with each other, the internet, and on-premises networks. VNet is similar to a traditional network 
+    that you'd operate in your own data center, but brings with it additional benefits of Azure's infrastructure such as scale, availability, and isolation.
+    VNet concepts:
+        Address space: When creating a VNet, you must specify a custom private IP address space using public 
+                       and private (RFC 1918) addresses. Azure assigns resources in a virtual network a 
+                       private IP address from the address space that you assign. For example, if you deploy 
+                       a VM in a VNet with address space, 10.0.0.0/16, the VM will be assigned a private IP like 10.0.0.4.
+        Subnets: Subnets enable you to segment the virtual network into one or more sub-networks and allocate 
+                 a portion of the virtual network's address space to each subnet. You can then deploy Azure 
+                 resources in a specific subnet. Just like in a traditional network, subnets allow you to segment 
+                 your VNet address space into segments that are appropriate for the organization's internal network. 
+                 This also improves address allocation efficiency. You can secure resources within subnets using 
+                 Network Security Groups. For more information, see Security groups.
+        Regions: VNet is scoped to a single region/location; however, multiple virtual networks from different 
+                 regions can be connected together using Virtual Network Peering.
+        Subscription: VNet is scoped to a subscription. You can implement multiple virtual networks within 
+                each Azure subscription and Azure region.
+
+- Azure CLI
+    For Windows the Azure CLI is installed via an MSI, which gives you access to the CLI through the Windows 
+    Command Prompt (CMD) or PowerShell. When installing for Windows Subsystem for Linux (WSL), 
+    packages are available for your Linux distribution.
+    The Azure CLI is a command-line tool providing a great experience for managing Azure resources. 
+    The CLI is designed to make scripting easy, query data, support long-running operations, and more.
+
+- Azure Data Lake
+   Azure Data Lake includes all the capabilities required to make it easy for developers, data scientists, 
+   and analysts to store data of any size, shape, and speed, and do all types of processing and analytics across 
+   platforms and languages. It removes the complexities of ingesting and storing all of your data while making 
+   it faster to get up and running with batch, streaming, and interactive analytics. Azure Data Lake works 
+   with existing IT investments for identity, management, and security 
+   for simplified data management and governance. It also integrates seamlessly with operational stores 
+   and data warehouses so you can extend current data applications. We've drawn on the experience 
+   of working with enterprise customers and running some of the largest scale processing and analytics 
+   in the world for Microsoft businesses like Office 365, Xbox Live, Azure, Windows, Bing, and Skype. 
+   Azure Data Lake solves many of the productivity and scalability challenges that prevent you 
+   from maximizing the value of your data assets with a service that's ready to meet your current and future business needs.
+   Unlock new insights from your data with Azure SQL Data Warehouse, a fully managed cloud data warehouse 
+   for enterprises of any size that combines lightning-fast query performance with industry-leading data security. 
+   Optimise workloads by elastically scaling your resources in minutes. Get unlimited storage, 
+   automated administration and built-in auditing and threat detection. Integrate seamlessly with Azure Active 
+   Directory, Azure Data Factory, Azure Data Lake Storage, Azure Databricks and Microsoft Power 
+   BI to provide a single holistic modern data warehouse solution for all your analytical workloads.
+
+- Azure CLI 
+   Install Azure CLI on Linux manually
+   If there's no package for the Azure CLI for your distribution, install the CLI manually by running a script.
+
+- Azure Firewall
+   Azure Firewall: Cloud-native network security to protect your Azure Virtual Network resources
+
+- Gatways
+  A VPN gateway is a specific type of virtual network gateway that is used to send encrypted traffic between an 
+  Azure virtual network and an on-premises location over the public Internet. You can also use a VPN gateway to 
+  send encrypted traffic between Azure virtual networks over the Microsoft network. Each virtual network can have 
+  only one VPN gateway. However, you can create multiple connections to the same VPN gateway. When you create 
+  multiple connections to the same VPN gateway, all VPN tunnels share the available gateway bandwidth.
+  A virtual network gateway is composed of two or more virtual machines that are deployed to a specific 
+  subnet you create, which is called the gateway subnet. The VMs that are located in the gateway subnet 
+  are created when you create the virtual network gateway. Virtual network gateway VMs are configured to 
+  contain routing tables and gateway services specific to the gateway. You can't directly configure 
+  the VMs that are part of the virtual network gateway and you should never deploy additional resources 
+  to the gateway subnet.
+  VPN gateways can be deployed in Azure Availability Zones. This brings resiliency, scalability, 
+  and higher availability to virtual network gateways. Deploying gateways in Azure Availability 
+  Zones physically and logically separates gateways within a region, while protecting your on-premises 
+  network connectivity to Azure from zone-level failures.
+
+- Azure virtual networks
+  Azure virtual networks are similar to LANs on your on-premises network. The idea behind an Azure virtual 
+  network is that you create a network, based on a single private IP address space, on which you can place 
+  all your Azure virtual machines. The private IP address spaces available are in the Class A (10.0.0.0/8), 
+  Class B (172.16.0.0/12), and Class C (192.168.0.0/16) ranges.
+  Best practice: Create network access controls between subnets. Routing between subnets happens automatically, 
+  and you don't need to manually configure routing tables. By default, there are no network access controls 
+  between the subnets that you create on an Azure virtual network.
+  Detail: Use a network security group to protect against unsolicited traffic into Azure subnets. 
+  Network security groups are simple, stateful packet inspection devices that use the 5-tuple 
+  approach (source IP, source port, destination IP, destination port, and layer 4 protocol) to create allow/deny 
+  rules for network traffic. You allow or deny traffic to and from a single IP address, to and from multiple 
+  IP addresses, or to and from entire subnets.
+  When you use network security groups for network access control between subnets, you can put 
+  resources that belong to the same security zone or role in their own subnets.
+
+- Azure policy
+  Azure Policy is a service in Azure that you use to create, assign, and manage policies. These policies enforce 
+  different rules and effects over your resources, so those resources stay compliant with your corporate standards 
+  and service level agreements. Azure Policy meets this need by evaluating your resources for non-compliance with 
+  assigned policies. For example, you 
+  can have a policy to allow only a certain SKU size of virtual machines in your environment. Once this policy 
+  is implemented, new and existing resources are evaluated for compliance. With the right type of policy, 
+  existing resources can be brought into compliance.
+  There are a few key differences between Azure Policy and role-based access control (RBAC). 
+  RBAC focuses on user actions at different scopes. You might be added to the contributor role 
+  for a resource group, allowing you to make changes to that resource group. Azure Policy focuses 
+  on resource properties during deployment and for already existing resources. Azure Policy controls 
+  properties such as the types or locations of resources. Unlike RBAC, Azure Policy is a default allow and explicit deny system.
+
+- DDoS protection.
+  Distributed denial of service (DDoS) attacks are some of the largest availability and security concerns 
+    facing customers that are moving their applications to the cloud. A DDoS attack attempts to exhaust 
+    an application's resources, making the application unavailable to legitimate users. DDoS attacks can 
+    be targeted at any endpoint that is publicly reachable through the internet.
+  Product features:
+    Always-on monitoring and automatic network attack mitigation
+    Adaptive tuning based on platform insights in Azure
+    Application layer protection with Azure Application Gateway Web Application Firewall
+    Integration with Azure Monitor for analytics and insights
+    Protection against the unforeseen costs of a DDoS attack
+
+- Trust center
+  The Azure Security Information site on Azure.com gives you the information you need to plan, design, 
+  deploy, configure, and manage your cloud solutions securely. With the Microsoft Trust center, you also 
+  have the information you need to be confident that the Azure platform on which you run your services is secure.
+  Compliance: Microsoft helps organizations comply with national, regional, and industry-specific requirements 
+  governing the collection and use of individuals' data.
+
+- Azure Key vault
+  Azure Key Vault helps solve the following problems:
+
+  Secrets Management 
+    Azure Key Vault can be used to Securely store and tightly control access to tokens, 
+    passwords, certificates, API keys, and other secrets.
+    Key Management - Azure Key Vault can also be used as a Key Management solution. Azure Key Vault makes 
+    it easy to create and control the encryption keys used to encrypt your data.
+  Certificate Management 
+    Azure Key Vault is also a service that lets you easily provision, manage, and 
+    deploy public and private Secure Sockets Layer/Transport Layer Security (SSL/TLS) certificates for use with 
+    Azure and your internal connected resources.
+    Store secrets backed by Hardware Security Modules - The secrets and keys can be protected either by software 
+    or FIPS 140-2 Level 2 validates HSMs  
+
+- Azure Locks
+   Lock resources to prevent unexpected changes!
+   As an administrator, you may need to lock a subscription, resource group, or resource to prevent other users 
+   in your organization from accidentally deleting or modifying critical resources. You can set the lock level 
+   to CanNotDelete or ReadOnly. In the portal, the locks are called Delete and Read-only respectively.
+   CanNotDelete means authorized users can still read and modify a resource, but they can't delete the resource.
+   ReadOnly means authorized users can read a resource, but they can't delete or update the resource. Applying this 
+   lock is similar to restricting all authorized users to the permissions granted by the Reader role.
+
+- Question 28
