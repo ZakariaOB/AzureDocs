@@ -130,3 +130,43 @@ If the hardware of your vending machines can collect and send this information i
 DevTest Labs => I think you should know that
 - **Azure DevTest Labs** is a service that enables developers to efficiently self-manage virtual machines (VMs) and Platform as a service (PaaS) resources without waiting for approvals. DevTest Labs creates labs consisting of pre-configured bases or Azure Resource
 - What is the usage of Azure test labs : Managing a sandbox environnement for developers/testers(Paas)
+
+
+# Describe Azure management tools
+
+## Describe the functionality and usage of the Azure Portal, Azure PowerShell, Azure CLI, Cloud Shell and Azure Mobile App 
+
+- **Azure Portal** First, in this scenario, does Tailwind Traders need to perform one-off management, administrative, or reporting actions? Yes, and given the requirement to view data visually and create custom reports during the meeting, the Azure portal is the best choice. The meeting attendees can quickly find answers to their questions by using a wealth of reporting options . The Azure portal is the correct product option for this scenario.
+
+- **Azure PowerShell** The team moved its applications to the cloud, and it now needs a way to perform one-off testing, management, and administrative tasks in its intranet environment. The team quickly realized that managing Azure from the portal takes too much time and is not repeatable. Which tool should the company use for one-off tasks?
+
+- **Azure CLI** Choosing the right option in this scenario should be determined by the team's background. Because this team has a Linux administration background, it would likely be most comfortable using the Azure CLI. The Azure CLI allows the team to use the Bash shell and its syntax to perform one-off administration tasks.
+The Azure CLI is the best choice for this scenario.
+
+- **Azure Mobile App** First, does Tailwind Traders need to perform one-off management, administrative, reporting actions? Yes. The real question is, how? A phone or tablet solution could help key employees keep an eye on the health of the cloud environment when they're out of the office. The Azure mobile app is likely a good compromise, because it lets employees be away from work and still perform essential, one-off management and administrative tasks.
+We can skip the rest of the decision criteria in this unique scenario. The Azure mobile app is the right choice
+
+- **What is the difference between Azure CLI and Azure cloud shell?**
+Azure CLI is the command-line interface that creates an environment to create and manage resources. Azure CLI is available on Windows, Mac, Linux, etc. Azure cloud shell is another option that can be browser-accessible and authenticated. Azure cloud shell gives you options to choose from either bash or Powershell.
+
+## Describe the functionality and usage of Azure Advisor
+
+- Azure Advisor analyzes your configurations and usage telemetry and offers personalized, actionable recommendations to help you optimize your Azure resources for reliability, security, operational excellence, performance, and cost.
+
+
+## Describe the functionality and usage of Azure Resource Manager (ARM) templates
+
+- **Usage** Tailwind Traders wants to operationalize their cloud deployments. The company needs a repeatable, reliable way to scale its operations during peak sales periods. Because you'll be choosing a process for scaling your production environment, you need to ensure that your chosen service:
+     - Is efficient and can potentially create many resources in parallel.
+     - Creates all dependencies in the correct order.
+     - Can be used without worrying that it failed in the middle of provisioning the necessary infrastructure.
+
+- **ARM Templates** are a way to declare the objects you want, the types, names and properties in a JSON file which can be checked into source control and managed like any other code file. ARM Templates are what really gives us the ability to roll out Azure “Infrastructure as code
+
+## Describe the functionality and usage of Azure Monitor 
+
+- **Azure Monitor** collects monitoring telemetry from a variety of on-premises and Azure sources. Management tools, such as those in Azure Security Center and Azure Automation, also push log data to Azure Monitor. The service aggregates and stores this telemetry in a log data store that's optimized for cost and performance.
+
+## Describe the functionality and usage of Azure Service Health 
+
+- **Azure Service Health** keeps you informed about the health of your environment. It provides a personalized view of the status of your Azure services and regions, includes information about planned maintenance and current incidents, and offers richer functionality, including alerting and RCAs.
